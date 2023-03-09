@@ -1,0 +1,11 @@
+from .parent import parent
+
+def mocked_request():
+  return "fetch_request"
+
+<app>
+  <parent hello='world'>
+      <p>{[ mocked_request() for i in range(4)]}</p>
+  </parent>
+<app>
+

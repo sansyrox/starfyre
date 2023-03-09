@@ -1,8 +1,9 @@
 from dataclasses import dataclass
 from html.parser import HTMLParser
+from typing import Any, Optional
 from uuid import uuid4
 
-import js
+# import js
 
 
 class Parser(HTMLParser):
@@ -45,8 +46,8 @@ class Component:
     state: dict
     original_data: str = ""
     data: str = ""
-    parentDom: js.Element = None
-    dom: js.Element = None
+    parentComponent: Optional[ Any ] = None
+    html: str = ""
     uuid = uuid4()
     # on any property change, rebuild the tree
 
